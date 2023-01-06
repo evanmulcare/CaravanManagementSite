@@ -1,0 +1,16 @@
+export { default as Dashboard } from './Dashboard';
+export { default as Kanban } from './Kanban';
+export { default as Payments } from './Payments';
+export { default as Employees } from './Employees';
+export { default as Editor } from './Editor';
+export { default as Tenants } from './Tenants';
+export { default as ColorPicker } from './ColorPicker';
+export { default as Calendar } from './Calendar';
+export { default as Line } from './Line';
+export { default as Pie } from './Pie';
+export { default as About } from './About';
+export { default as Contact } from './Contact';
+export { default as Public } from './Public';
+export { default as Photos } from './Photos';
+export { default as NewTenant } from './NewTenant';
+export { default as NewEmployee } from './NewEmployee';
