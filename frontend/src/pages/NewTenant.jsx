@@ -116,7 +116,7 @@ return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-scree
             <input onChange={handleChange} name="caravanid" value={input.caravanid} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-caravanid" type="text" placeholder="C02" required/>
          </div>
             <div className='flex items-center justify-center mt-4 mb-4'>
-                <button onClick={handleClick} className="bg-cyan-700 hover:bg-cyan-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                <button onClick={handleClick} className="bg-lime-700 hover:bg-lime-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                     Add Tenant
                 </button>
             </div>

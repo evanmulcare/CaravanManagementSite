@@ -25,7 +25,7 @@ const Employees = () => {
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.email}</td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.address}</td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <Link className='font-bold text-cyan-700 hover:underline'>
+              <Link className='font-bold text-lime-700 hover:underline'>
                 Payroll
               </Link>
             </td>
@@ -50,7 +50,7 @@ const Employees = () => {
 
             <div className='p-2 text-sm text-gray-700'>{data.address}</div>
             <div>
-              <Link className='font-bold text-cyan-700 hover:underline'>
+              <Link className='font-bold text-lime-700 hover:underline'>
                 Payroll
               </Link>
             </div>
@@ -71,7 +71,7 @@ const Employees = () => {
       <div className='flex justify-between'>
         <Header category="People" title="Employees"/>
         <Link to="/new-employee">
-          <div><button className='border p-2 rounded-2xl bg-cyan-700 text-white'>Add Employee</button></div>
+          <div><button className='border p-2 rounded-2xl bg-lime-700 text-white'>Add Employee</button></div>
         </Link>
       </div>
       <div className='overflow-auto rounded-lg shadow hidden md:block'>

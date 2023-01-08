@@ -13,7 +13,7 @@ const Kanban = () => {
      <div className='flex justify-between'>
         <Header category="Planning" title="Tasks"/>
         <Link to="/new-tenant">
-          <div><button className='border p-2 rounded-2xl bg-cyan-700 text-white'>Add Task</button></div>
+          <div><button className='border p-2 rounded-2xl bg-lime-700 text-white'>Add Task</button></div>
         </Link>
     </div>
     <div className='flex-1 overflow-x-auto hidden md:block'>
@@ -44,7 +44,7 @@ const Kanban = () => {
                  </button>
                  <div className='flex items-center justify-between py-2'>
                   <h5 className='text-md font-semibold text-gray-700'>Assigned to</h5>
-                  <Link className='font-bold text-cyan-700 hover:underline'>
+                  <Link className='font-bold text-lime-700 hover:underline'>
                       Evan mulcare
                     </Link>
                 </div>
@@ -110,7 +110,7 @@ const Kanban = () => {
                   <div className='p-2 text-sm text-gray-700'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam inventore voluptatum hic cupiditate a molestiae esse, iste quo. Ratione sit odio veritatis iure corporis sunt dolorum amet aliquam labore.</div>
                   <div className='flex justify-between'>
                     <h3>Assigned to</h3>
-                    <Link className='font-bold text-cyan-700 hover:underline'>
+                    <Link className='font-bold text-lime-700 hover:underline'>
                       Evan mulcare
                     </Link>
                   </div>

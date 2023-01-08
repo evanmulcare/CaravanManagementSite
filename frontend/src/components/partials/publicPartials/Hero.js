@@ -13,7 +13,7 @@ const Hero = () => {
                 <br />
                   <p className='text-center text-white font-bold drop-shadow-xl'>Open Season 2023 : MAY 19 - OCT 23</p>
                   <br />
-                  <Link to="/login">
+                  <Link to="/contact">
                         <button className='text-xl font-bold cursor pointer drop-shadow-lg'>CONTACT</button>
                   </Link>
                
