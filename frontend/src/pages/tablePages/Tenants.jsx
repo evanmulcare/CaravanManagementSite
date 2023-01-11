@@ -1,22 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import Axios from 'axios';
-import { Header } from '../components';
+import { Header } from '../../components';
 import { GrView } from 'react-icons/gr'
 import { MdPersonRemoveAlt1 } from 'react-icons/md'
 import { RxDividerVertical } from 'react-icons/rx'
 
-const Employees = () => {   
+
+const Tenants = () => {   
   const [data, setData] = useState([])
 
    useEffect(() => {
-    Axios.get('http://localhost:3001/employees')
+    Axios.get('http://localhost:3001/tenants')
     .then(res => {
       console.log(res)
       setData(res.data)
     })
     .catch(err => console.error(err));
-   }, []) 
+   }, [data]) 
+
+   const tenantDelete = ( id, e) => {
+    e.preventDefault();
+    Axios.delete(`http://localhost:3001/tenants/${id}`)
+      .then(res => console.log(('Deleted') , res))
+      .catch(err => console.log(err))
+      alert("tenant deleted");
+   }
+
 
    const arr = data.map((data, index) => {
         return(
@@ -26,14 +36,14 @@ const Employees = () => {
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.address}</td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
               <Link className='font-bold text-lime-700 hover:underline'>
-                Payroll
-              </Link>
+                Payments
+              </Link >
             </td>
             <td className='p-3 text-md text-gray-700 whitespace-nowrap'>
               <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
-                <Link className='hover:underline'><GrView /></Link>
+                <Link className='hover:underline' to={`/tenant/${data._id}`}><GrView /></Link>
                 <RxDividerVertical />
-                <Link className='hover:underline'><MdPersonRemoveAlt1 /></Link>
+                <button onClick={(e) => tenantDelete(data._id, e)} className='hover:underline'><MdPersonRemoveAlt1 /></button>
               </span> 
             </td>
           </tr>
@@ -51,14 +61,14 @@ const Employees = () => {
             <div className='p-2 text-sm text-gray-700'>{data.address}</div>
             <div>
               <Link className='font-bold text-lime-700 hover:underline'>
-                Payroll
+                Payments
               </Link>
             </div>
             <div>
             <span className='p-2 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
-                <Link className='hover:underline'><GrView /></Link>
+                <Link className='hover:underline' to={`/tenant/${data._id}`}><GrView /></Link>
                 <RxDividerVertical />
-                <Link className='hover:underline'><MdPersonRemoveAlt1 /></Link>
+                <button onClick={(e) => tenantDelete(data._id, e)} className='hover:underline'><MdPersonRemoveAlt1 /></button>
               </span> 
             </div>
           
@@ -69,9 +79,9 @@ const Employees = () => {
   return (
     <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl '>
       <div className='flex justify-between'>
-        <Header category="People" title="Employees"/>
-        <Link to="/new-employee">
-          <div><button className='border p-2 rounded-2xl bg-lime-700 text-white'>Add Employee</button></div>
+        <Header category="People" title="Tenants"/>
+        <Link to="/new-tenant">
+          <div><button className='border p-2 rounded-2xl bg-lime-700 text-white'>Add Tenant</button></div>
         </Link>
       </div>
       <div className='overflow-auto rounded-lg shadow hidden md:block'>
@@ -81,7 +91,7 @@ const Employees = () => {
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Name</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Email</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Address</th>
-            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Payroll</th>
+            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Payments</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-center'>Actions</th>
           </tr>
           </thead>
@@ -90,8 +100,6 @@ const Employees = () => {
           </tbody>
         </table>
       </div>
-
-       {/*Collapse on smaller screens */}
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden'>
         {smallArr}
       </div>
@@ -100,4 +108,4 @@ const Employees = () => {
   )
 }
 
-export default Employees
+export default Tenants

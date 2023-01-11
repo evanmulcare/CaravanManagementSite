@@ -1,16 +1,27 @@
 import React, { useState } from 'react'
 import { BiExit } from 'react-icons/bi'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
  
 
-function NewTenant() {
+function NewEmployee() {
         const [input, setInput] = useState({
             firstname: '',
             lastname: '',
             email: '',
             address: '',
-            caravanid: ''
+            employeeid: ''
         })
+
+
+        const clearState = () => {
+            setInput({   
+            firstname: '',
+            lastname: '',
+            email: '',
+            address: '',
+            employeeid: ''});
+          };
     
     function handleChange(event) {
         const {name, value} = event.target;
@@ -25,27 +36,30 @@ function NewTenant() {
 
     function handleClick(event) {
         event.preventDefault();
-       const newTenant = {
+       const NewEmployee = {
             firstname: input.firstname,
             lastname: input.lastname,
             email: input.email,
             address: input.address,
-            caravanid: input.caravanid
+            employeeid: input.employeeid
         } 
 
-        axios.post('http://localhost:3001/tenants', newTenant)
+        axios.post('http://localhost:3001/employees', NewEmployee)
         .then(function (response) {
             console.log(response);
           })
           .catch(function (error) {
             console.log(error);
           });
+
+          clearState();
+          alert("Form submitted successfully");
     }
 
   
 return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-screen place-items-center'>
-        <BiExit className='text-2xl mt-5 mb-5'/>
-        <h1 className='text-2xl font-bold mb-5 mt-5'>Add a new Tenant!</h1>
+        <Link to='/employees'><BiExit className='text-2xl mt-5 mb-5 cursor-pointer'/></Link>
+        <h1 className='text-2xl font-bold mb-5 mt-5'>Add a new Employee!</h1>
         <form className="w-full max-w-lg">
         <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -76,7 +90,7 @@ return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-scree
                 Address line 1
             </label>
             <input onChange={handleChange} name="address" value={input.address} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-address" type="text" placeholder="123, Doon rd" required/>
-            <p className="text-gray-600 text-xs italic">boobies!</p>
+            <p className="text-gray-600 text-xs italic">text!</p>
             </div>
         </div>
         <div className="flex flex-wrap -mx-3 mb-2">
@@ -111,13 +125,13 @@ return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-scree
 
          <div class="w-full">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                Caravan ID
+                Employee ID
             </label>
-            <input onChange={handleChange} name="caravanid" value={input.caravanid} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-caravanid" type="text" placeholder="C02" required/>
+            <input onChange={handleChange} name="employeeid" value={input.employeeid} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-employeeid" type="text" placeholder="E01" required/>
          </div>
             <div className='flex items-center justify-center mt-4 mb-4'>
                 <button onClick={handleClick} className="bg-lime-700 hover:bg-lime-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                    Add Tenant
+                    Add Employee
                 </button>
             </div>
         </form>
@@ -125,4 +139,4 @@ return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-scree
 }
 
 
-export default NewTenant
+export default NewEmployee

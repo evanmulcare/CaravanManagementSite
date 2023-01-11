@@ -3,7 +3,7 @@ import React from 'react';
 import { BiTask } from 'react-icons/bi';
 import { FaMoneyBill } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai';
-
+import { BumpChart } from '../components';
 const Dashboard = () => {
 
   return (
@@ -13,7 +13,7 @@ const Dashboard = () => {
         <div className='flex justify-between items-center'>
         <div className='text-yellow-800 text-6xl'><BiTask /></div>
                 <div>
-                <h3 className='font-bold text-gray-400 text-2xl'>Requests</h3>
+                <h3 className='font-bold text-gray-400 text-2xl'>Tasks</h3>
                   <p className='text-lime-700 text-xl'>3</p>
                 </div>
             </div>
@@ -43,6 +43,7 @@ const Dashboard = () => {
         <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-screen gap-4'>
             <div className='border text-center rounded-xl py-12 px-8'>
                 <h3 className='font-bold text-gray-400 text-lg'>Money Overview</h3>
+                <div><BumpChart /></div>
             </div>
             <div className='grid grid-cols-2 gap-4'>
               <div className='border text-center rounded-xl py-12 px-8'>

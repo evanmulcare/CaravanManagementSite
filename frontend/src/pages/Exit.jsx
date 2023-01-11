@@ -17,12 +17,15 @@ const Exit = () => {
         <div className='border text-center rounded-xl py-12 px-8'>
           <h3 className='font-bold text-gray-400 text-lg'>User Information</h3>
           <div>
-            <h4>Name: {user.name}</h4>
-            <h4>Email: {user.email}</h4>
+            <h4>Account email: {user.name}</h4>
+
           </div>
         </div>
         <div className='border text-center rounded-xl py-12 px-8'>
           <h3 className='font-bold text-gray-400 text-lg'><AuthenticationButton /></h3>
+        </div>
+        <div className='border text-center rounded-xl py-12 px-8'>
+          <h3 className='font-bold text-gray-400 text-lg'>Rate DoonBay</h3>
         </div>
     </div>
 

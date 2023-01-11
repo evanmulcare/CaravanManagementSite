@@ -1,9 +1,11 @@
 import {RiDashboardFill, RiCaravanLine, RiContactsLine} from 'react-icons/ri'
 import {IoMdContacts} from 'react-icons/io'
-import {RxEnter, RxExit, RxExitFullScreen} from 'react-icons/rx'
-import {AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineStock} from 'react-icons/ai'
+import {BsFillPersonFill} from 'react-icons/bs'
+import {MdPhoto} from 'react-icons/md'
+import {RxEnter, RxExit } from 'react-icons/rx'
+import {AiOutlineCalendar, AiFillHome, AiFillQuestionCircle, AiFillLock, AiFillUnlock} from 'react-icons/ai'
 import {FaTasks} from 'react-icons/fa'
-import {FiShoppingBag, FiEdit} from 'react-icons/fi'
+import {FiEdit} from 'react-icons/fi'
 export const links = [
   {
     title: 'Dashboard',
@@ -20,7 +22,7 @@ export const links = [
     links: [
       {
         name: 'tenants',
-        icon: <RiDashboardFill />,
+        icon: <BsFillPersonFill />,
       },
       {
         name: 'employees',
@@ -75,7 +77,7 @@ export const links = [
       },
       {
         name: 'exit',
-        icon: <RxExitFullScreen />,
+        icon: <AiFillUnlock />,
       },
     ],
   },
@@ -88,7 +90,7 @@ export const publicLinks = [
     links: [
       {
         name: 'home',
-        icon: <FiShoppingBag />,
+        icon: <AiFillHome />,
       },
     ],
   },
@@ -98,11 +100,11 @@ export const publicLinks = [
     links: [
       {
         name: 'photos',
-        icon: <AiOutlineShoppingCart />,
+        icon: <MdPhoto />,
       },
       {
         name: 'about',
-        icon: <IoMdContacts />,
+        icon: <AiFillQuestionCircle />,
       },
       {
         name: 'contact',
@@ -115,7 +117,7 @@ export const publicLinks = [
     links: [
       {
         name: 'Sign-in',
-        icon: <AiOutlineStock />,
+        icon: <AiFillLock />,
       },
     ],
   },

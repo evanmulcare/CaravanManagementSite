@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Navbar, Sidebar, } from './components';
-import { Dashboard, Payments, Calendar, Employees, Tenants, Kanban, Editor, NewTenant, NewEmployee, SiteInfo, Exit, SignIn, Payroll, Expenses} from './pages';
-import {About,Photos, Public, Contact} from './pages';
+import { Navbar, Sidebar, BumpChart } from './components';
+import { Dashboard, Payments, Calendar, Employees, Tenants, Kanban, Editor, NewTenant, NewEmployee, SiteInfo, Exit, SignIn, Payroll, Expenses, NewBlog, NewTask, TenantView, EmployeeView, BlogView, NewPayment, NewPayroll,NewExpense} from './pages';
+import {AboutPage ,Photos, Public, Contact} from './pages';
 import { useStateContext } from './contexts/ContextProvider';
 import ProtectedRoute from './auth/ProtectedRoute';
-
 
 const App = () => {
   const { activeMenu } = useStateContext();
@@ -39,7 +38,7 @@ const App = () => {
                   {/*Dash */}
                   <Route path='/home' element={<Public />} />
                   <Route path='/photos' element={<Photos />} />
-                  <Route path='/about' element={<About />} />
+                  <Route path='/about' element={<AboutPage />} />
                   <Route path='/contact' element={<Contact />} />
                   <Route path='/sign-in' element={<SignIn />} />
         
@@ -48,19 +47,28 @@ const App = () => {
                                 {/*People */}
                    
                         <Route path='/employees' element={<Employees />} />
+                        <Route path='/employee/:id' element={<EmployeeView />} /> 
                         <Route path='/new-employee' element={<NewEmployee />} />
                         <Route path='/tenants' element={<Tenants />} /> 
+                        <Route path='/tenant/:id' element={<TenantView />} /> 
                         <Route path='/new-tenant' element={<NewTenant />} />
+                       
 
                         {/*Money */}
                         <Route path='/payments' element={<Payments />} />
+                        <Route path='/new-payment' element={<NewPayment />} />
                         <Route path='/payroll' element={<Payroll />} />
+                        <Route path='/new-payroll' element={<NewPayroll />} />
                         <Route path='/expenses' element={<Expenses />} />
+                        <Route path='/new-expense' element={<NewExpense />} />
 
 
                       {/*Planning */}
                       <Route path='/tasks' element={<Kanban />} />
+                      <Route path='/new-task' element={<NewTask />} />
                       <Route path='/blog' element={<Editor />} />
+                      <Route path='/blog/:id' element={<BlogView />} />
+                      <Route path='/new-blog' element={<NewBlog />} />
                       <Route path='/calendar' element={<Calendar />} />
                      
 
