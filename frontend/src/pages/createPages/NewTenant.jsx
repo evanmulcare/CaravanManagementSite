@@ -3,7 +3,6 @@ import { BiExit } from 'react-icons/bi'
 import axios from 'axios';
 import { Link } from 'react-router-dom'
 import { MdDangerous } from 'react-icons/md';
-import { getElementIndex } from '@syncfusion/ej2-react-grids';
  
 function NewTenant() {
         const [input, setInput] = useState({

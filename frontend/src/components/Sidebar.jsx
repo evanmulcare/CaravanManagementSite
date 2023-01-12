@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import {RiCaravanLine} from 'react-icons/ri';
 import { MdOutlineCancel } from 'react-icons/md';
-import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { links, publicLinks } from '../data/Links';
 import { useStateContext } from '../contexts/ContextProvider';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -30,11 +29,9 @@ const Sidebar = () => {
                 <Link to='/' onClick={handleCloseSideBar} className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'>
                 <RiCaravanLine /> <span>DoonBay</span>
                 </Link>
-                <TooltipComponent content="Menu" position="BottomCenter">
-                  <button type="button" onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} className="text-xl rounded-full p-3 text-black hover:bg-light-gray mt-4 block">
+                <button type="button" onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} className="text-xl rounded-full p-3 text-black hover:bg-light-gray mt-4 block">
                     <MdOutlineCancel />
                   </button>
-                </TooltipComponent>
             </div> 
             <div className='mt-10'>
                 {publicLinks.map((item) => (
@@ -74,11 +71,9 @@ const Sidebar = () => {
             <Link to='/' onClick={handleCloseSideBar} className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'>
             <RiCaravanLine /> <span>DoonBay</span>
             </Link>
-            <TooltipComponent content="Menu" position="BottomCenter">
-              <button type="button" onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} className="text-xl rounded-full p-3 text-black hover:bg-light-gray mt-4 block">
+            <button type="button" onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} className="text-xl rounded-full p-3 text-black hover:bg-light-gray mt-4 block">
                 <MdOutlineCancel />
               </button>
-            </TooltipComponent>
         </div> 
         <div className='mt-10'>
             {links.map((item) => (

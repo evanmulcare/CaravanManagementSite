@@ -24,3 +24,4 @@ export { default as NewExpense } from './createPages/NewExpense';
 export { default as TenantView } from './viewPages/TenantView';
 export { default as EmployeeView } from './viewPages/EmployeeView';
 export { default as BlogView } from './viewPages/BlogView';
+export { default as TaskView } from './viewPages/TaskView';

@@ -8,7 +8,7 @@ const LogoutButton = () => {
   return (
     isAuthenticated && (
     <button
-      className="btn btn-danger btn-block"
+      className="bg-red-500 text-white p-3 rounded-md hover:bg-red-700"
       onClick={() =>
         logout({
           returnTo: window.location.origin,

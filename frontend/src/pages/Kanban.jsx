@@ -3,6 +3,7 @@ import { Header } from '../components';
 import { Link } from 'react-router-dom'
 import { BsThreeDots } from 'react-icons/bs'
 import { GrView } from 'react-icons/gr'
+import { BsFillTrashFill } from 'react-icons/bs'
 import { RxDividerVertical } from 'react-icons/rx'
 import { TiTickOutline } from 'react-icons/ti'
 import Axios from 'axios';
@@ -17,7 +18,15 @@ const Kanban = () => {
       setData(res.data)
     })
     .catch(err => console.error(err));
-   }, []) 
+   }, [data]) 
+
+   const taskDelete = ( id, e) => {
+    e.preventDefault();
+    Axios.delete(`http://localhost:3001/tasks/${id}`)
+      .then(res => console.log(('Deleted') , res))
+      .catch(err => console.log(err))
+      alert("task deleted");
+   }
 
    const arr = data.map((data, index) => {
         return( 
@@ -33,8 +42,8 @@ const Kanban = () => {
                   <p>{data.body}</p>
                  </div>
                  <button className='hidden absolute top-1 right-1 w-98 h-8 bg-gray-50 group-hover:grid place-items-center rounded-md text-gray-600 hover:text-black hover:bg-gray-200 px-1'>
-                    <GrView />
-                    <Link className='hover:underline'><TiTickOutline className='text-lg'/></Link>
+                    <Link className='hover:underline' to={`/task/${data._id}`}><GrView /></Link>
+                    <button onClick={(e) => taskDelete(data._id, e)} className='hover:underline'><BsFillTrashFill /></button>
                  </button>
                  <div className='flex items-center justify-between py-2'>
                   <h5 className='text-md font-semibold text-gray-700'>Assigned to</h5>
@@ -115,11 +124,34 @@ const Kanban = () => {
           <div className='w-72 bg-gray-100 max-h-full flex flex-col rounded-md'>
             <div className='flex items-center justify-between px-3 py-2'>
               <h3 className='text-md font-semibold text-gray-700'>Review</h3>
-              <button className='hover:bg-gray-300 w-8 h-8 rounded-md grid place-content-center'><BsThreeDots /></button>
+              <button className='hover:bg-gray-300 w-8 h-8 rounded-md grid place-content-center'>1</button>
             </div>
             <div className='px-3 pb-3 overflow-y-auto'>
               <ul className='space-y-3'>
                   {/* Review Tasks*/}
+                        <li className='group relative bg-white p-3 shadow rounded-md border-b border-gray-200 hover:bg-gray-50'>
+                          <div className='text-md'>
+                            <div className='inline-flex space-x-2'>
+                              <h2 className='p-2'>Send Invoice</h2>
+                              <button className='bg-yellow-400 p-1 grid place-items-center rounded-md text-white'>
+                                Mid
+                              </button>
+                            </div>
+                            <div className='p-3'>
+                            <p>Send invoice of opayment to elanine</p>
+                          </div>
+                          <button className='hidden absolute top-1 right-1 w-98 h-8 bg-gray-50 group-hover:grid place-items-center rounded-md text-gray-600 hover:text-black hover:bg-gray-200 px-1'>
+                              <Link className='hover:underline' to={`/task/${data._id}`}><GrView /></Link>
+                              <Link className='hover:underline'><BsFillTrashFill className='text-lg'/></Link>
+                          </button>
+                          <div className='flex items-center justify-between py-2'>
+                            <h5 className='text-md font-semibold text-gray-700'>Assigned to</h5>
+                            <Link className='font-bold text-lime-700 hover:underline'>
+                              Thomas
+                              </Link>
+                          </div>
+                          </div>
+                        </li>
               </ul>
             
             </div>
@@ -129,11 +161,35 @@ const Kanban = () => {
           <div className='w-72 bg-gray-100 max-h-full flex flex-col rounded-md'>
             <div className='flex items-center justify-between px-3 py-2'>
               <h3 className='text-md font-semibold text-gray-700'>Completed</h3>
-              <button className='hover:bg-gray-300 w-8 h-8 rounded-md grid place-content-center'><BsThreeDots /></button>
+              <button className='hover:bg-gray-300 w-8 h-8 rounded-md grid place-content-center'>2</button>
             </div>
             <div className='px-3 pb-3 overflow-y-auto'>
               <ul className='space-y-3'>
                  {/* Completed Tasks*/}
+
+                 <li className='group relative bg-white p-3 shadow rounded-md border-b border-gray-200 hover:bg-gray-50'>
+                          <div className='text-md'>
+                            <div className='inline-flex space-x-2'>
+                              <h2 className='p-2'>Complete landscaping</h2>
+                              <button className='bg-green-400 p-1 grid place-items-center rounded-md text-white'>
+                                Low
+                              </button>
+                            </div>
+                            <div className='p-3'>
+                            <p>Complete landscaping on bottom park</p>
+                          </div>
+                          <button className='hidden absolute top-1 right-1 w-98 h-8 bg-gray-50 group-hover:grid place-items-center rounded-md text-gray-600 hover:text-black hover:bg-gray-200 px-1'>
+                              <GrView />
+                              <Link className='hover:underline'><BsFillTrashFill className='text-lg'/></Link>
+                          </button>
+                          <div className='flex items-center justify-between py-2'>
+                            <h5 className='text-md font-semibold text-gray-700'>Assigned to</h5>
+                            <Link className='font-bold text-lime-700 hover:underline'>
+                              Thomas
+                              </Link>
+                          </div>
+                          </div>
+                        </li>
               </ul>
             
             </div>

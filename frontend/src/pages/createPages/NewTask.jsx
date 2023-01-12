@@ -68,9 +68,9 @@ return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-scree
             </div>
             <div className="w-full px-3">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
-               Body
+               Task for completion
             </label>
-            <input  onChange={handleChange} name="body" value={input.body} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-body" type="text" placeholder="Body" required/>
+            <textarea  onChange={handleChange} name="body" value={input.body} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" rows="4" cols="50" type="text" placeholder="Task" required/>
             </div>
         </div>
         <div className="flex flex-wrap -mx-3 mb-6">

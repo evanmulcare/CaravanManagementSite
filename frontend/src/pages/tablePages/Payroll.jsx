@@ -5,6 +5,7 @@ import { Header } from '../../components';
 import { GrView } from 'react-icons/gr'
 import { MdPersonRemoveAlt1 } from 'react-icons/md'
 import { RxDividerVertical } from 'react-icons/rx'
+import { BsFillTrashFill } from 'react-icons/bs'
 
 const Payroll = () => {    
   const [data, setData] = useState([])
@@ -38,7 +39,7 @@ const Payroll = () => {
              <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
                <Link className='hover:underline' to={`/payroll/${data._id}`}><GrView /></Link>
                <RxDividerVertical />
-               <button onClick={(e) => payrollDelete(data._id, e)} className='hover:underline'><MdPersonRemoveAlt1 /></button>
+               <button onClick={(e) => payrollDelete(data._id, e)} className='hover:underline'><BsFillTrashFill /></button>
              </span> 
            </td>
          </tr>
@@ -63,7 +64,7 @@ const Payroll = () => {
            <span className='p-2 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
                <Link className='hover:underline' to={`/payroll/${data._id}`}><GrView /></Link>
                <RxDividerVertical />
-               <button onClick={(e) => payrollDelete(data._id, e)} className='hover:underline'><MdPersonRemoveAlt1 /></button>
+               <button onClick={(e) => payrollDelete(data._id, e)} className='hover:underline'><BsFillTrashFill /></button>
              </span> 
            </div>
          

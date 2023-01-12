@@ -8,7 +8,7 @@ const LoginButton = () => {
   return (
     !isAuthenticated && (
     <button
-      className="btn btn-primary btn-block"
+    className="bg-lime-500 text-white p-3 rounded-md hover:bg-lime-700"
       onClick={() => loginWithRedirect()}
     >
       Log In
