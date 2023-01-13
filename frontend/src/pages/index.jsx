@@ -1,10 +1,10 @@
 export { default as Dashboard } from './Dashboard';
-export { default as Kanban } from './Kanban';
+export { default as Tasks } from './Tasks';
 export { default as Payments } from './Payments';
 export { default as Employees } from './tablePages/Employees';
-export { default as Editor } from './Editor';
+export { default as Blog } from './Blog';
 export { default as Tenants } from './tablePages/Tenants';
-export { default as Calendar } from './Calendar';
+export { default as Calendarpg } from './Calendarpg';
 export { default as AboutPage } from './publicPages/AboutPage';
 export { default as Contact } from './publicPages/Contact';
 export { default as Public } from './publicPages/Public';

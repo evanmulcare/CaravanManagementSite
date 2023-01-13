@@ -68,7 +68,7 @@ router.delete('/:id', getExpense, async(req, res) => {
 async function getExpense(req, res, next) {
     let expense 
     try {
-        expense = await expense.findById(req.params.id)
+        expense = await Expense.findById(req.params.id)
         if (expense == null) {
             return res.status(404).json({ message: 'Cannot find expense'})
         }

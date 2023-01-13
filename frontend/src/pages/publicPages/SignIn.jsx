@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header } from '../../components';
 import AuthenticationButton from '../../components/auth/AuthenticationButton';
+import {StarRating} from '../../components';
 
 const SignIn = () => {
   return (
@@ -10,6 +11,11 @@ const SignIn = () => {
       <div className='border text-center rounded-xl py-12 px-8'>
           <h3 className='font-bold text-gray-400 text-lg'><AuthenticationButton /></h3>
       </div>
+      <div className='border text-center rounded-xl py-12 px-8'>
+          <h3 className='font-bold text-gray-400 text-lg'>Rate DoonBay</h3>
+          <br />
+          <div className='items-center'><StarRating /></div>
+        </div>
     </div>
   )
 }

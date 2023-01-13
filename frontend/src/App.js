@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar, Sidebar } from './components';
-import { Dashboard, Payments, Calendar, Employees, Tenants, Kanban, Editor, NewTenant, NewEmployee, SiteInfo, Exit, SignIn, Payroll, Expenses, NewBlog, NewTask, TenantView, EmployeeView, BlogView,TaskView, NewPayment, NewPayroll,NewExpense} from './pages';
+import { Dashboard, Payments, Calendarpg, Employees, Tenants, Tasks, Blog, NewTenant, NewEmployee, SiteInfo, Exit, SignIn, Payroll, Expenses, NewBlog, NewTask, TenantView, EmployeeView, BlogView,TaskView, NewPayment, NewPayroll,NewExpense} from './pages';
 import {AboutPage ,Photos, Public, Contact} from './pages';
 import { useStateContext } from './contexts/ContextProvider';
 import ProtectedRoute from './auth/ProtectedRoute';
@@ -67,13 +67,13 @@ const App = () => {
 
 
                       {/*Planning */}
-                      <Route path='/tasks' element={<Kanban />} />
+                      <Route path='/tasks' element={<Tasks />} />
                       <Route path='/new-task' element={<NewTask />} />
                       <Route path='/task/:id' element={<TaskView />} />
-                      <Route path='/blog' element={<Editor />} />
+                      <Route path='/blog' element={<Blog />} />
                       <Route path='/blog/:id' element={<BlogView />} />
                       <Route path='/new-blog' element={<NewBlog />} />
-                      <Route path='/calendar' element={<Calendar />} />
+                      <Route path='/calendar' element={<Calendarpg />} />
                      
 
                       {/*Members */}

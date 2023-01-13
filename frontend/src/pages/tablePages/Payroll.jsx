@@ -36,9 +36,7 @@ const Payroll = () => {
            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.employeeid}</td>
            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.createdAt}</td>
            <td className='p-3 text-md text-gray-700 whitespace-nowrap'>
-             <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
-               <Link className='hover:underline' to={`/payroll/${data._id}`}><GrView /></Link>
-               <RxDividerVertical />
+             <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around hover:bg-yellow-200'>
                <button onClick={(e) => payrollDelete(data._id, e)} className='hover:underline'><BsFillTrashFill /></button>
              </span> 
            </td>
@@ -88,7 +86,7 @@ const Payroll = () => {
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Name</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Payment Type</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Amount</th>
-            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Employee ID</th>
+            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>EID</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Created</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-center'>Actions</th>
           </tr>

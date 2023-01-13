@@ -37,7 +37,7 @@ const Sidebar = () => {
                 {publicLinks.map((item) => (
                   <div key={item.title}>
                     <p className='text-gray-400 m-3 mt-4 uppercase'>
-                      {item.title}
+                      {item.title} 
                     </p>
                     {item.links.map((link) => (
                       <NavLink

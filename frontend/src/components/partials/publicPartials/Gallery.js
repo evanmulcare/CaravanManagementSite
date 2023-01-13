@@ -1,26 +1,30 @@
 import { current } from '@reduxjs/toolkit'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import terminal from '../assets/terminal.png'
+import entrance from '../assets/entrance.png'
+import pic2 from '../assets/pic2.png'
+import pic3 from '../assets/pic3.png'
+import pic4 from '../assets/pic4.png'
+import pic5 from '../assets/pic5.png'
 import Button from './Button'
 
 const Gallery = () => {
     const slides = [
         {
-          url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
+          url: entrance,
         },
         {
-          url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
+          url: pic2,
         },
         {
-          url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80',
+          url: pic3,
         },
     
         {
-          url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
+          url: pic4,
         },
         {
-          url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
+          url: pic5,
         },
       ];
 
@@ -75,9 +79,6 @@ const Gallery = () => {
 
             <div className='text-center'>
                 <p className='py-16'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas numquam natus ipsam quam quo voluptates atque nesciunt ea, distinctio soluta?</p>
-                <Link to="/" className='text-4xl'>
-                   <ion-icon name="arrow-up-circle-outline"></ion-icon>
-                </Link>
             </div>
             
             

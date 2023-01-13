@@ -7,6 +7,7 @@ const SiteInfo = () => {
            <Header category="Members" title="Site Information"/>
          <div className='border text-center rounded-xl py-12 px-8'>
                 <h3 className='font-bold text-gray-400 text-lg'>Doon Bay Caravan Park</h3>
+                
             </div>
     </div>
   )

@@ -36,9 +36,7 @@ const Payments = () => {
            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.caravanid}</td>
            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.createdAt}</td>
            <td className='p-3 text-md text-gray-700 whitespace-nowrap'>
-             <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
-               <Link className='hover:underline' to={`/payments/${data._id}`}><GrView /></Link>
-               <RxDividerVertical />
+             <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around hover:bg-yellow-200'>
                <button onClick={(e) => paymentDelete(data._id, e)} className='hover:underline'><BsFillTrashFill /></button>
              </span> 
            </td>
@@ -61,9 +59,7 @@ const Payments = () => {
              </Link>
            </div>
            <div>
-           <span className='p-2 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
-               <Link className='hover:underline' to={`/payments/${data._id}`}><GrView /></Link>
-               <RxDividerVertical />
+           <span className='p-2 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around hover:bg-yellow-200'>
                <button onClick={(e) => paymentDelete(data._id, e)} className='hover:underline'><BsFillTrashFill /></button>
              </span> 
            </div>
@@ -89,7 +85,7 @@ const Payments = () => {
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Name</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Payment Type</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Amount</th>
-            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Caravan ID</th>
+            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>CID</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Created</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-center'>Actions</th>
           </tr>

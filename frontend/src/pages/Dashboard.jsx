@@ -7,7 +7,8 @@ import { AiFillStar } from 'react-icons/ai';
 import { BumpChart } from '../components';
 import { GrView } from 'react-icons/gr'
 import { BsFillTrashFill } from 'react-icons/bs'
-import {StarRating} from '../components';
+import { events } from '../data/events';
+
 const Dashboard = () => {
   const [data, setData] = useState([])
 
@@ -97,6 +98,15 @@ const Dashboard = () => {
             <div className='grid grid-cols-2 gap-4'>
               <div className='border text-center rounded-xl py-12 px-8'>
                   <h3 className='font-bold text-gray-400 text-lg'>Upcoming events</h3>
+                  {events.map((item) => ( 
+                    <Link to='/calendar'>
+                    <div className='bg-lime-600 rounded-3xl hover:bg-lime-400'>
+                    <p className='text-white m-3 mt-4 uppercase'>
+                    {item.title}
+                    </p>
+                    </div>
+                    </Link>
+                  ))}
               </div>
               <div className='border text-center rounded-xl py-12 px-8'>
                   <h3 className='font-bold text-gray-400 text-lg'><span>{arr.length}</span> Task In Progress</h3>

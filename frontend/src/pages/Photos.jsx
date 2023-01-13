@@ -1,33 +1,38 @@
 import React,{useState} from 'react'
 import { Header } from '../components';
-import terminal from '../components/partials/assets/terminal.png'
+import entrance from '../components/partials/assets/entrance.png'
+import Map from '../components/partials/assets/Map.png'
+import pic2 from '../components/partials/assets/pic2.png'
+import pic3 from '../components/partials/assets/pic3.png'
+import pic4 from '../components/partials/assets/pic4.png'
+import pic5 from '../components/partials/assets/pic5.png'
 import {AiOutlineClose} from 'react-icons/ai'
 
 const Photos = () => {
   let data = [
     {
       id: 1,
-      imgSrc: terminal,
+      imgSrc: entrance,
     },
     {
       id: 2,
-      imgSrc: terminal,
+      imgSrc: pic2,
     },
     {
       id: 3,
-      imgSrc: terminal,
+      imgSrc: Map,
     },
     {
       id: 4,
-      imgSrc: terminal,
+      imgSrc: pic3,
     },
     {
       id: 5,
-      imgSrc: terminal,
+      imgSrc: pic4,
     },
     {
       id: 6,
-      imgSrc: terminal,
+      imgSrc: pic5,
     },
   ]
   const [model, setModel] = useState(false);

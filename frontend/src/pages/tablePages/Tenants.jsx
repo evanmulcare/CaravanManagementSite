@@ -34,13 +34,9 @@ const Tenants = () => {
             <td className='p-3 text-sm text-gray-700 flex justify-around whitespace-nowrap'>{data.firstname} {data.lastname}</td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.email}</td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.address}</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <Link className='font-bold text-lime-700 hover:underline'>
-                Payments
-              </Link >
-            </td>
+            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.caravanid}</td>
             <td className='p-3 text-md text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
+              <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around hover:bg-yellow-200'>
                 <Link className='hover:underline' to={`/tenant/${data._id}`}><GrView /></Link>
                 <RxDividerVertical />
                 <button onClick={(e) => tenantDelete(data._id, e)} className='hover:underline'><MdPersonRemoveAlt1 /></button>
@@ -65,7 +61,7 @@ const Tenants = () => {
               </Link>
             </div>
             <div>
-            <span className='p-2 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
+            <span className='p-2 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around hover:bg-yellow-200'>
                 <Link className='hover:underline' to={`/tenant/${data._id}`}><GrView /></Link>
                 <RxDividerVertical />
                 <button onClick={(e) => tenantDelete(data._id, e)} className='hover:underline'><MdPersonRemoveAlt1 /></button>
@@ -91,7 +87,7 @@ const Tenants = () => {
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Name</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Email</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Address</th>
-            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Payments</th>
+            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>CID</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-center'>Actions</th>
           </tr>
           </thead>

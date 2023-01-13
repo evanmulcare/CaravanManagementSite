@@ -32,13 +32,9 @@ const Employees = () => {
             <td className='p-3 text-sm text-gray-700 flex justify-around whitespace-nowrap'>{data.firstname} {data.lastname}</td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.email}</td>
             <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.address}</td>
-            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>
-              <Link className='font-bold text-lime-700 hover:underline'>
-                Payroll
-              </Link>
-            </td>
+            <td className='p-3 text-sm text-gray-700 whitespace-nowrap'>{data.employeeid}</td>
             <td className='p-3 text-md text-gray-700 whitespace-nowrap'>
-              <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
+              <span className='p-1.5 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around hover:bg-yellow-200'>
                 <Link className='hover:underline' to={`/employee/${data._id}`}><GrView /></Link>
                 <RxDividerVertical />
                 <button onClick={(e) => employeeDelete(data._id, e)} className='hover:underline'><MdPersonRemoveAlt1 /></button>
@@ -63,7 +59,7 @@ const Employees = () => {
               </Link>
             </div>
             <div>
-            <span className='p-2 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around'>
+            <span className='p-2 text-md font-medium tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50 flex justify-around hover:bg-yellow-200'>
                 <Link className='hover:underline' to={`/employee/${data._id}`}><GrView /></Link>
                 <RxDividerVertical />
                 <button onClick={(e) => employeeDelete(data._id, e)} className='hover:underline'><MdPersonRemoveAlt1 /></button>
@@ -89,7 +85,7 @@ const Employees = () => {
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Name</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Email</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Address</th>
-            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>Payroll</th>
+            <th className='w-20 p-3 text-sm font-semibold tracking-wide text-left'>EID</th>
             <th className='w-20 p-3 text-sm font-semibold tracking-wide text-center'>Actions</th>
           </tr>
           </thead>

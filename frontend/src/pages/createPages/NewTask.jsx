@@ -93,7 +93,7 @@ return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-scree
                 Assigned
             </label>
             <input onChange={handleChange} name="assigned" value={input.assigned} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-assigned" type="text" placeholder="Assigned to" required/>
-            <p className="text-gray-600 text-xs italic">Make it trustworthy</p>
+  
             </div>
         </div>
             <div className='flex items-center justify-center mt-4 mb-4'>

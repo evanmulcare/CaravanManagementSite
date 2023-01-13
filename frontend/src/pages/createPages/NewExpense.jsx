@@ -81,7 +81,7 @@ return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-scree
                Payment Type
             </label>
             <input  onChange={handleChange} name="paymentType" value={input.paymentType} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" placeholder="Cash" required/>
-            <p className="text-gray-600 text-xs italic">cash is king!</p>
+
             </div>
         </div>
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -90,7 +90,7 @@ return <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl grid h-scree
                 Amount
             </label>
             <input onChange={handleChange} name="amount" value={input.amount} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="number" placeholder="1000" required/>
-            <p className="text-gray-600 text-xs italic">text!</p>
+
             </div>
         </div>
 
